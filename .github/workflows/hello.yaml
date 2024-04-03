@@ -1,0 +1,20 @@
+name: hello
+on:
+  push:
+    paths:
+      - 'README.md'
+      - '!docs/**'
+      - '**.java'
+    branches:
+      - 'master'
+      - 'release/**'
+      - '!dev/**'
+  pull_request:
+    types: [opened, reopened, synchronize, labeled, unlabeled]
+  workflow_dispatch:
+jobs:
+  say-hello:
+    runs-on: macos-11
+    steps:
+      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
+      - run: echo Hello world, today is $TODAY
