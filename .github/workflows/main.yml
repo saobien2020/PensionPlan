@@ -16,4 +16,4 @@ jobs:
   say-hello:
     runs-on: macos-11
     steps:     
-      - run: echo Hello world
+      - run: echo Hello world, today is $TODAY
