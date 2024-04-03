@@ -15,6 +15,5 @@ on:
 jobs:
   say-hello:
     runs-on: macos-11
-    steps:
-      - run: echo "TODAY=$(date +%y-%m-%d)" >> $GITHUB_ENV
-      - run: echo Hello world, today is $TODAY
+    steps:     
+      - run: echo Hello world
